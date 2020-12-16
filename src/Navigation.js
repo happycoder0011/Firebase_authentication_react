@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import * as ROUTES from './constants/routes';
-
+import SignOutButton from './components/Auth/SignOut';
 
 const Nagivation = () => (
     <div>
@@ -21,7 +21,9 @@ const Nagivation = () => (
             <li>
                 <Link to={ROUTES.ADMIN}>ADMIN</Link>
             </li>
- 
+            <li>
+                <SignOutButton/>
+            </li>
         </ul>
     </div>
 );

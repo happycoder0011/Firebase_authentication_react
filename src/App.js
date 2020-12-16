@@ -3,13 +3,13 @@ import {BrowserRouter as Router,Route} from 'react-router-dom';
 import './App.css';
 import Navigation from './Navigation';
 //from are wrong
-import LandingPage from './components/ColorPanel/ColorPanel';
+import LandingPage from './components/LandingPage';
 import Signuppage from './components/Auth/Register';
 import Signinnpage from './components/Auth/Login';
-import Passwordforgetpage from './components/Auth/Login';
-import Homepage from './components/Messages/FileModal';
-import Adminpage from './components/Messages/FileModal';
-import Accountpage from './components/Messages/FileModal';
+import Passwordforgetpage from './components/PasswordForget';
+import Homepage from './components/Homepage';
+import Adminpage from './components/Adminpage';
+import Accountpage from './components/Accountpage';
 
 import * as ROUTES from './constants/routes';
 
