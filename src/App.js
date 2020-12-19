@@ -1,8 +1,10 @@
 import React from 'react';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 import './App.css';
+import {AuthUserContext} from './components/Session'
+
 import Navigation from './Navigation';
-//from are wrong
+import {withFirebase} from './Firebase/Index';
 import LandingPage from './components/LandingPage';
 import Signuppage from './components/Auth/Register';
 import Signinnpage from './components/Auth/Login';
@@ -10,13 +12,11 @@ import Passwordforgetpage from './components/PasswordForget';
 import Homepage from './components/Homepage';
 import Adminpage from './components/Adminpage';
 import Accountpage from './components/Accountpage';
-
+import {withAuthentication} from  './components/Session';
 import * as ROUTES from './constants/routes';
 
-function App() {
-  return (
-    <div className="App">
-      app
+const App = () => (
+ 
       <Router>
         <div>
         <Navigation/>
@@ -31,8 +31,7 @@ function App() {
         
         </div>
       </Router>
-    </div>
   );
-}
 
-export default App;
+
+export default withAuthentication(App);
